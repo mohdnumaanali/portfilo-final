@@ -5,6 +5,13 @@
    ========================================================================== */
 
 /* ---------- 1. Design Tokens ---------- */
+.portrait_img {
+  width: 180px;        /* adjust to fit circle */
+  height: 180px;
+  border-radius: 50%;  /* makes it circular */
+  object-fit: cover;   /* crops nicely */
+}
+
 :root {
   /* Palette */
   --bg-0: #0B1120;
