@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+       META
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0B1120" />
+  <meta name="color-scheme" content="dark" />
+
+  <title>Mohammed Numaan Ali — AI & Machine Learning Engineer</title>
+  <meta name="description" content="Portfolio of Mohammed Numaan Ali — AI & Machine Learning Engineer, Python Developer, and Full Stack Learner based in Hyderabad, India. Building intelligent systems with AI, Python, and modern technologies." />
+  <meta name="author" content="Mohammed Numaan Ali" />
+  <meta name="keywords" content="Mohammed Numaan Ali, AI Engineer, Machine Learning, Python Developer, Portfolio, Hyderabad, SR University, Deep Learning, Data Science, TensorFlow, AWS, Google Cloud" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mohammed Numaan Ali — AI & Machine Learning Engineer" />
+  <meta property="og:description" content="Building Intelligent Systems Through AI, Python, and Modern Technologies." />
+  <meta property="og:site_name" content="Mohammed Numaan Ali" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mohammed Numaan Ali — AI & Machine Learning Engineer" />
+  <meta name="twitter:description" content="Building Intelligent Systems Through AI, Python, and Modern Technologies." />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohammed Numaan Ali",
+    "jobTitle": "AI & Machine Learning Engineer",
+    "description": "AI & Machine Learning student and Python Developer building intelligent systems.",
+    "url": "",
+    "email": "mailto:numaan.ali.mustafa143@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hyderabad",
+      "addressRegion": "Telangana",
+      "addressCountry": "India"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "SR University"
+    },
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Deep Learning",
+      "Python",
+      "Data Science",
+      "Cloud Computing",
+      "TensorFlow"
+    ],
+    "sameAs": [
+      "https://github.com/mohdnumaanali",
+      "https://www.linkedin.com/in/mohammed-numaan-ali-734551378"
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons (SVG inline preferred, but a lightweight font as fallback) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.363.0/font/lucide.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='%233B82F6'/><stop offset='1' stop-color='%238B5CF6'/></linearGradient></defs><rect rx='22' width='100' height='100' fill='url(%23g)'/><text x='50' y='66' font-family='Inter,Arial' font-size='52' font-weight='700' text-anchor='middle' fill='white'>N</text></svg>" />
+</head>
+<body>
+
+  <!-- ============================================================
+       LOADING SCREEN
+  ============================================================ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__ring"></div>
+    <div class="loader__brand">
+      <span class="loader__mark">N</span>
+      <span class="loader__text">Numaan<span>.ai</span></span>
+    </div>
+    <div class="loader__bar"><span></span></div>
+  </div>
+
+  <!-- ============================================================
+       CUSTOM CURSOR
+  ============================================================ -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       MOUSE GLOW / AMBIENT
+  ============================================================ -->
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__blob ambient__blob--a"></div>
+    <div class="ambient__blob ambient__blob--b"></div>
+    <div class="ambient__blob ambient__blob--c"></div>
+    <div class="ambient__grid"></div>
+  </div>
+  <div class="mouse-glow" id="mouseGlow" aria-hidden="true"></div>
+
+  <!-- Particles canvas -->
+  <canvas id="particles" class="particles" aria-hidden="true"></canvas>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#home" class="nav__brand" aria-label="Mohammed Numaan Ali — Home">
+        <span class="nav__logo">
+          <svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true">
+            <defs>
+              <linearGradient id="navGrad" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#3B82F6"/>
+                <stop offset="0.5" stop-color="#06B6D4"/>
+                <stop offset="1" stop-color="#8B5CF6"/>
+              </linearGradient>
+            </defs>
+            <rect x="2" y="2" width="36" height="36" rx="10" fill="url(#navGrad)"/>
+            <text x="20" y="27" text-anchor="middle" font-family="Space Grotesk, Inter" font-size="20" font-weight="700" fill="white">N</text>
+          </svg>
+        </span>
+        <span class="nav__name">Numaan<span class="nav__accent">.ai</span></span>
+      </a>
+
+      <nav class="nav__menu" id="navMenu" aria-label="Primary">
+        <a href="#home" class="nav__link">Home</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#skills" class="nav__link">Skills</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#certificates" class="nav__link">Certificates</a>
+        <a href="#timeline" class="nav__link">Journey</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a href="#contact" class="btn btn--ghost btn--sm magnetic">
+          <span>Let's talk</span>
+          <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i>
+        </a>
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero" id="home">
+      <div class="container hero__inner">
+
+        <div class="hero__content">
+          <div class="hero__eyebrow reveal">
+            <span class="pulse-dot"></span>
+            <span>Available for internships · Summer 2026</span>
+          </div>
+
+          <h1 class="hero__title reveal">
+            <span class="hero__title-line">Hi, I'm <span class="grad-text">Mohammed Numaan Ali</span>.</span>
+            <span class="hero__title-line hero__title-line--muted">I build intelligent systems that</span>
+            <span class="hero__title-line">
+              <span class="typed" id="typed" aria-live="polite">learn</span><span class="caret" aria-hidden="true"></span>
+            </span>
+          </h1>
+
+          <p class="hero__lead reveal">
+            AI &amp; Machine Learning Engineer in the making. I turn ideas into
+            working products with <strong>Python</strong>, <strong>Deep Learning</strong>,
+            and a lot of curiosity. Currently studying B.Tech CSE (AI &amp; ML) at
+            SR University, Hyderabad.
+          </p>
+
+          <div class="hero__actions reveal">
+            <a class="btn btn--primary magnetic" href="assets/resume/Mohammed-Numaan-Ali-Resume.pdf" download>
+              <i class="lucide lucide-download" aria-hidden="true"></i>
+              <span>Download Resume</span>
+            </a>
+            <a class="btn btn--outline magnetic" href="#projects">
+              <i class="lucide lucide-layout-grid" aria-hidden="true"></i>
+              <span>View Projects</span>
+            </a>
+            <a class="btn btn--ghost magnetic" href="#contact">
+              <i class="lucide lucide-mail" aria-hidden="true"></i>
+              <span>Contact Me</span>
+            </a>
+          </div>
+
+          <ul class="hero__socials reveal" aria-label="Social links">
+            <li><a href="https://github.com/mohdnumaanali" target="_blank" rel="noopener" aria-label="GitHub"><i class="lucide lucide-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/mohammed-numaan-ali-734551378" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="lucide lucide-linkedin"></i></a></li>
+            <li><a href="mailto:numaan.ali.mustafa143@gmail.com" aria-label="Email"><i class="lucide lucide-mail"></i></a></li>
+          </ul>
+
+          <div class="hero__stats reveal">
+            <div class="stat">
+              <span class="stat__num" data-counter="15">0</span><span class="stat__plus">+</span>
+              <span class="stat__label">Certifications</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-counter="6">0</span><span class="stat__plus">+</span>
+              <span class="stat__label">Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-counter="4">0</span>
+              <span class="stat__label">Languages</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-counter="2029">0</span>
+              <span class="stat__label">Graduating</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Portrait -->
+        <div class="hero__portrait reveal">
+          <div class="portrait">
+            <div class="portrait__ring"></div>
+            <div class="portrait__ring portrait__ring--slow"></div>
+            <div class="portrait__glow"></div>
+            <div class="portrait__frame">
+              <!-- Replace with real image at assets/images/profile.jpg -->
+              <img src="assets/images/profile.jpg" alt="Portrait of Mohammed Numaan Ali" loading="eager"
+                   onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'portrait__placeholder',innerHTML:'MN'}))" />
+            </div>
+
+            <!-- Floating chips -->
+            <div class="chip chip--1"><i class="lucide lucide-brain"></i><span>Deep Learning</span></div>
+            <div class="chip chip--2"><i class="lucide lucide-cpu"></i><span>TensorFlow</span></div>
+            <div class="chip chip--3"><i class="lucide lucide-cloud"></i><span>AWS · GCP</span></div>
+            <div class="chip chip--4"><i class="lucide lucide-code-2"></i><span>Python</span></div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="hero__scroll" aria-label="Scroll to next section">
+        <span></span>
+        <em>Scroll</em>
+      </a>
+    </section>
+
+    <!-- ============================================================
+         ABOUT
+    ============================================================ -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">01 — About</span>
+          <h2 class="section__title">A student engineer with a <span class="grad-text">production mindset</span>.</h2>
+          <p class="section__sub">The short story of who I am, what I care about, and where I'm heading.</p>
+        </header>
+
+        <div class="about">
+          <article class="about__card glass reveal">
+            <h3>Who I am</h3>
+            <p>
+              I'm <strong>Mohammed Numaan Ali</strong>, an AI &amp; Machine Learning
+              undergraduate at SR University, Hyderabad. I'm obsessed with turning
+              messy real-world problems into elegant, working software — from
+              training models and analyzing data to shipping full-stack tools.
+            </p>
+            <p>
+              I don't just study concepts; I build with them. Every week is a small
+              experiment: a new dataset, a new architecture, a new deployment.
+              Curiosity is my compiler.
+            </p>
+
+            <div class="about__facts">
+              <div class="fact"><i class="lucide lucide-map-pin"></i><span>Hyderabad, India</span></div>
+              <div class="fact"><i class="lucide lucide-graduation-cap"></i><span>B.Tech CSE (AI &amp; ML)</span></div>
+              <div class="fact"><i class="lucide lucide-calendar"></i><span>2025 – 2029</span></div>
+              <div class="fact"><i class="lucide lucide-languages"></i><span>EN · HI · UR · TE</span></div>
+            </div>
+          </article>
+
+          <aside class="about__side">
+            <div class="glass about__mini reveal">
+              <h4>Currently exploring</h4>
+              <ul class="tags">
+                <li>LLMs</li><li>Prompt Engineering</li><li>MLOps</li>
+                <li>Data Engineering</li><li>Cloud Automation</li>
+              </ul>
+            </div>
+            <div class="glass about__mini reveal">
+              <h4>Looking for</h4>
+              <p>AI/ML internships, research collaborations, and open-source projects where I can learn from world-class engineers.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SKILLS
+    ============================================================ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">02 — Skills</span>
+          <h2 class="section__title">The <span class="grad-text">stack</span> I build with.</h2>
+          <p class="section__sub">Tools, languages, and frameworks I use to design, train, and ship.</p>
+        </header>
+
+        <div class="skills">
+          <!-- Programming -->
+          <div class="glass skills__group reveal">
+            <div class="skills__head">
+              <i class="lucide lucide-code"></i>
+              <h3>Programming</h3>
+            </div>
+            <div class="skills__grid">
+              <div class="skill" data-level="85"><span class="skill__name">Python</span><div class="skill__bar"><span></span></div><span class="skill__pct">85%</span></div>
+              <div class="skill" data-level="70"><span class="skill__name">C++</span><div class="skill__bar"><span></span></div><span class="skill__pct">70%</span></div>
+              <div class="skill" data-level="75"><span class="skill__name">JavaScript</span><div class="skill__bar"><span></span></div><span class="skill__pct">75%</span></div>
+              <div class="skill" data-level="90"><span class="skill__name">HTML5</span><div class="skill__bar"><span></span></div><span class="skill__pct">90%</span></div>
+              <div class="skill" data-level="85"><span class="skill__name">CSS3</span><div class="skill__bar"><span></span></div><span class="skill__pct">85%</span></div>
+              <div class="skill" data-level="70"><span class="skill__name">SQL</span><div class="skill__bar"><span></span></div><span class="skill__pct">70%</span></div>
+            </div>
+          </div>
+
+          <!-- AI & ML -->
+          <div class="glass skills__group reveal">
+            <div class="skills__head">
+              <i class="lucide lucide-brain-circuit"></i>
+              <h3>AI &amp; Machine Learning</h3>
+            </div>
+            <div class="rings">
+              <div class="ring" data-value="78"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" class="ring__track"/><circle cx="60" cy="60" r="52" class="ring__fill"/></svg><div class="ring__inner"><strong>78%</strong><span>Machine Learning</span></div></div>
+              <div class="ring" data-value="70"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" class="ring__track"/><circle cx="60" cy="60" r="52" class="ring__fill"/></svg><div class="ring__inner"><strong>70%</strong><span>Deep Learning</span></div></div>
+              <div class="ring" data-value="72"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" class="ring__track"/><circle cx="60" cy="60" r="52" class="ring__fill"/></svg><div class="ring__inner"><strong>72%</strong><span>TensorFlow</span></div></div>
+              <div class="ring" data-value="80"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" class="ring__track"/><circle cx="60" cy="60" r="52" class="ring__fill"/></svg><div class="ring__inner"><strong>80%</strong><span>Data Science</span></div></div>
+              <div class="ring" data-value="82"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" class="ring__track"/><circle cx="60" cy="60" r="52" class="ring__fill"/></svg><div class="ring__inner"><strong>82%</strong><span>Data Analysis</span></div></div>
+              <div class="ring" data-value="88"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" class="ring__track"/><circle cx="60" cy="60" r="52" class="ring__fill"/></svg><div class="ring__inner"><strong>88%</strong><span>Prompt Engineering</span></div></div>
+            </div>
+          </div>
+
+          <!-- Cloud -->
+          <div class="glass skills__group reveal">
+            <div class="skills__head">
+              <i class="lucide lucide-cloud"></i>
+              <h3>Cloud</h3>
+            </div>
+            <div class="chips">
+              <span class="pill"><i class="lucide lucide-cloud"></i>AWS Cloud</span>
+              <span class="pill"><i class="lucide lucide-cloud"></i>Google Cloud</span>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="glass skills__group reveal">
+            <div class="skills__head">
+              <i class="lucide lucide-wrench"></i>
+              <h3>Developer Tools</h3>
+            </div>
+            <div class="chips">
+              <span class="pill"><i class="lucide lucide-git-branch"></i>Git</span>
+              <span class="pill"><i class="lucide lucide-github"></i>GitHub</span>
+              <span class="pill"><i class="lucide lucide-code-2"></i>VS Code</span>
+            </div>
+          </div>
+
+          <!-- Soft skills -->
+          <div class="glass skills__group reveal">
+            <div class="skills__head">
+              <i class="lucide lucide-sparkles"></i>
+              <h3>Soft Skills</h3>
+            </div>
+            <div class="chips">
+              <span class="pill">Leadership</span>
+              <span class="pill">Communication</span>
+              <span class="pill">Problem Solving</span>
+              <span class="pill">Team Work</span>
+              <span class="pill">Quick Learning</span>
+              <span class="pill">Critical Thinking</span>
+            </div>
+          </div>
+
+          <!-- Languages -->
+          <div class="glass skills__group reveal">
+            <div class="skills__head">
+              <i class="lucide lucide-languages"></i>
+              <h3>Languages</h3>
+            </div>
+            <div class="langs">
+              <div class="lang"><span>English</span><em>Fluent</em></div>
+              <div class="lang"><span>Hindi</span><em>Fluent</em></div>
+              <div class="lang"><span>Urdu</span><em>Native</em></div>
+              <div class="lang"><span>Telugu</span><em>Conversational</em></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROJECTS
+    ============================================================ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">03 — Projects</span>
+          <h2 class="section__title">Selected <span class="grad-text">work</span> &amp; experiments.</h2>
+          <p class="section__sub">A few things I've built while learning by doing.</p>
+        </header>
+
+        <div class="projects" id="projectsGrid">
+          <!-- Cards are enhanced with tilt in JS -->
+          <article class="project tilt reveal">
+            <div class="project__media" data-color="#3B82F6"><i class="lucide lucide-code-2"></i></div>
+            <div class="project__body">
+              <h3>Practice Python</h3>
+              <p>A growing collection of Python exercises and patterns I use to sharpen fundamentals — from recursion to OOP.</p>
+              <div class="tags"><span>Python</span><span>Algorithms</span><span>OOP</span></div>
+              <div class="project__actions">
+                <a class="btn btn--sm btn--outline" href="https://github.com/mohdnumaanali" target="_blank" rel="noopener"><i class="lucide lucide-github"></i>GitHub</a>
+                <a class="btn btn--sm btn--ghost" href="#" aria-disabled="true"><i class="lucide lucide-external-link"></i>Live</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project tilt reveal">
+            <div class="project__media" data-color="#06B6D4"><i class="lucide lucide-terminal"></i></div>
+            <div class="project__body">
+              <h3>Python Problems</h3>
+              <p>Curated problem sets with clean, tested solutions. Focused on readable, idiomatic Python.</p>
+              <div class="tags"><span>Python</span><span>Problem Solving</span></div>
+              <div class="project__actions">
+                <a class="btn btn--sm btn--outline" href="https://github.com/mohdnumaanali" target="_blank" rel="noopener"><i class="lucide lucide-github"></i>GitHub</a>
+                <a class="btn btn--sm btn--ghost" href="#" aria-disabled="true"><i class="lucide lucide-external-link"></i>Live</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project tilt reveal">
+            <div class="project__media" data-color="#8B5CF6"><i class="lucide lucide-flask-conical"></i></div>
+            <div class="project__body">
+              <h3>Python Mini Projects</h3>
+              <p>Small end-to-end projects: automation scripts, CLI tools, and quick prototypes that solve real annoyances.</p>
+              <div class="tags"><span>Python</span><span>Automation</span><span>CLI</span></div>
+              <div class="project__actions">
+                <a class="btn btn--sm btn--outline" href="https://github.com/mohdnumaanali" target="_blank" rel="noopener"><i class="lucide lucide-github"></i>GitHub</a>
+                <a class="btn btn--sm btn--ghost" href="#" aria-disabled="true"><i class="lucide lucide-external-link"></i>Live</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project tilt reveal project--feature">
+            <div class="project__media" data-color="#14F195"><i class="lucide lucide-line-chart"></i></div>
+            <div class="project__body">
+              <h3>Trading Bot</h3>
+              <p>An experimental algorithmic trading bot exploring signals, backtesting, and disciplined risk management.</p>
+              <div class="tags"><span>Python</span><span>Data Analysis</span><span>Finance</span></div>
+              <div class="project__actions">
+                <a class="btn btn--sm btn--outline" href="https://github.com/mohdnumaanali" target="_blank" rel="noopener"><i class="lucide lucide-github"></i>GitHub</a>
+                <a class="btn btn--sm btn--ghost" href="#" aria-disabled="true"><i class="lucide lucide-external-link"></i>Live</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project tilt reveal">
+            <div class="project__media" data-color="#3B82F6"><i class="lucide lucide-book-open"></i></div>
+            <div class="project__body">
+              <h3>SRU Problems</h3>
+              <p>Solutions to university coursework and lab problems — organized so future juniors can learn faster.</p>
+              <div class="tags"><span>C++</span><span>Python</span><span>DSA</span></div>
+              <div class="project__actions">
+                <a class="btn btn--sm btn--outline" href="https://github.com/mohdnumaanali" target="_blank" rel="noopener"><i class="lucide lucide-github"></i>GitHub</a>
+                <a class="btn btn--sm btn--ghost" href="#" aria-disabled="true"><i class="lucide lucide-external-link"></i>Live</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project tilt reveal">
+            <div class="project__media" data-color="#8B5CF6"><i class="lucide lucide-heart-handshake"></i></div>
+            <div class="project__body">
+              <h3>NayePankh Web Project</h3>
+              <p>A web project supporting a social cause — designed to be simple, accessible, and mobile-first.</p>
+              <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+              <div class="project__actions">
+                <a class="btn btn--sm btn--outline" href="https://github.com/mohdnumaanali" target="_blank" rel="noopener"><i class="lucide lucide-github"></i>GitHub</a>
+                <a class="btn btn--sm btn--ghost" href="#" aria-disabled="true"><i class="lucide lucide-external-link"></i>Live</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CERTIFICATES
+    ============================================================ -->
+    <section class="section" id="certificates">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">04 — Certifications</span>
+          <h2 class="section__title">A gallery of <span class="grad-text">continuous learning</span>.</h2>
+          <p class="section__sub">15+ certifications across AI, data, cloud, and web development.</p>
+        </header>
+
+        <div class="certs__toolbar glass reveal">
+          <div class="search">
+            <i class="lucide lucide-search"></i>
+            <input type="search" id="certSearch" placeholder="Search certificates…" aria-label="Search certificates" />
+          </div>
+          <div class="filters" id="certFilters" role="tablist" aria-label="Filter by organization">
+            <button class="chip-btn is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="chip-btn" data-filter="aws" role="tab">AWS</button>
+            <button class="chip-btn" data-filter="ibm" role="tab">IBM</button>
+            <button class="chip-btn" data-filter="coursera" role="tab">Coursera</button>
+            <button class="chip-btn" data-filter="google" role="tab">Google</button>
+            <button class="chip-btn" data-filter="michigan" role="tab">U. of Michigan</button>
+            <button class="chip-btn" data-filter="jhu" role="tab">Johns Hopkins</button>
+          </div>
+        </div>
+
+        <div class="certs" id="certsGrid">
+          <!-- Cards -->
+          <article class="cert glass reveal" data-org="aws" data-name="AWS Cloud Practitioner Essentials">
+            <div class="cert__logo" style="--c:#FF9900"><i class="lucide lucide-cloud"></i>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" 
+         alt="AWS Logo" width="40" height="40" />
+        </div>
+            <h3 class="cert__title">AWS Cloud Practitioner Essentials</h3>
+            <p class="cert__meta">Amazon Web Services · 2026</p>
+            <a href="https://coursera.org/share/e655029757d2f2e715fb23f21af711d2" target="_blank" rel="noopener">
+            <button class="btn btn--sm btn--outline cert__btn" data-preview>View Certificate</button>
+            </a>
+          </article>
+          <article class="cert glass reveal" data-org="ibm" data-name="Data Visualization with Python">
+            <div class="cert__logo" style="--c:#0F62FE"><i class="lucide lucide-bar-chart-3"></i>
+             <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" 
+         alt="IBM Logo" width="40" height="40" />
+        </div>
+            <h3 class="cert__title">Data Visualization with Python</h3>
+            <p class="cert__meta">IBM · 2026</p>
+            <a href="https://coursera.org/share/edb08f4c2ddd45b7029af41908f882bb" target="_blank" rel="noopener">
+            <button class="btn btn--sm btn--outline cert__btn" data-preview>View Certificate</button>
+            </a>
+          </article>
+          <article class="cert glass reveal" data-org="ibm" data-name="Excel Basics for Data Analysis">
+            <div class="cert__logo" style="--c:#217346"><i class="lucide lucide-table"></i>
+             <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" 
+         alt="IBM Logo" width="40" height="40" />
+        </div>
+            <h3 class="cert__title">Excel Basics for Data Analysis</h3>
+            <p class="cert__meta">IBM · 2024</p>
+            <a href="https://coursera.org/share/6994b0f53f9ee247891fa64e8fb4c166" target="_blank" rel="noopener">
+            <button class="btn btn--sm btn--outline cert__btn" data-preview>View Certificate</button>
+            </a>
+          </article>
+          <article class="cert glass reveal" data-org="ibm" data-name="Databases and SQL for Data Science with Python">
+            <div class="cert__logo" style="--c:#0F62FE"><i class="lucide lucide-database"></i>
+             <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" 
+         alt="IBM Logo" width="40" height="40" />
+        </div>
+            <h3 class="cert__title">Databases and SQL for Data Science with Python</h3>
+            <p class="cert__meta">IBM · 2024</p>
+            <a href="https://coursera.org/share/79da9e5747fc53b907c7a7136b30ddfd" target="_blank" rel="noopener">
+            <button class="btn btn--sm btn--outline cert__btn" data-preview>View Certificate</button>
+            </a>
+          </article>
+          <article class="cert glass reveal" data-org="ibm" data-name="Python for Data Science, AI & Development">
+            <div class="cert__logo" style="--c:#0F62FE"><i class="lucide lucide-code-2"></i>
+             <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" 
+         alt="IBM Logo" width="40" height="40" />
+        </div>
+            <h3 class="cert__title">Python for Data Science, AI &amp; Development</h3>
+            <p class="cert__meta">IBM · 2024</p>
+            <a href="https://coursera.org/share/f244a300cccc5f125ba9f9e1b6e69202" target="_blank" rel="noopener">
+            <button class="btn btn--sm btn--outline cert__btn" data-preview>View Certificate</button>
+            </a>
+          </article>
+          <article class="cert glass reveal" data-org="ibm" data-name="Introduction to Data Analytics">
+            <div class="cert__logo" style="--c:#0F62FE"><i class="lucide lucide-pie-chart"></i>
+             <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" 
+         alt="IBM Logo" width="40" height="40" />
+        </div>
+            <h3 class="cert__title">Introduction to Data Analytics</h3>
+            <p class="cert__meta">IBM · 2024</p>
+            <a href="https://coursera.org/share/39f139cdf968745469cf04a86875276b" target="_blank" rel="noopener">
+            <button class="btn btn--sm btn--outline cert__btn" data-preview>View Certificate</button>
+            </a>
+          </article>
+          <article class="cert glass reveal" data-org="ibm" data-name="Introduction to Front-End Development">
+            <div class="cert__logo" style="--c:#0F62FE"><i class="lucide lucide-layout"></i>
+             <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" 
+         alt="IBM Logo" width="40" height="40" />
+        </div>
+            <h3 class="cert__title">Introduction to Front-End Development</h3>
+            <p class="cert__meta">IBM · 2024</p>
+            <a href="https://coursera.org/share/17b91191faafacf90213801c3016786a" target="_blank" rel="noopener">
+            <button class="btn btn--sm btn--outline cert__btn" data-preview>View Certificate</button>
+            </a>
+          </article>
+          <article class="cert glass reveal" data-org="google" data-name="Using Python to Interact with the Operating System">
+            <div class="cert__logo" style="--c:#4285F4"><i class="lucide lucide-terminal"></i>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" 
+         alt="Google Logo" width="40" height="40" />
+        </div>
+            <h3 class="cert__title">Using Python to Interact with the OS</h3>
+            <p class="cert__meta">Google · 2024</p>
+            <a href="https://www.coursera.org/account/accomplishments/verify/BDEUVPP8HQ85?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank" rel="noopener">
+            <button class="btn btn--sm btn--outline cert__btn" data-preview>View Certificate</button>
+            </a>
+          </article>
+          <article class="cert glass reveal" data-org="google" data-name="Crash Course on Python">
+            <div class="cert__logo" style="--c:#4285F4"><i class="lucide lucide-code"></i>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" 
+         alt="Google Logo" width="40" height="40" />
+        </div>
+            <h3 class="cert__title">Crash Course on Python</h3>
+            <p class="cert__meta">Google · 2024</p>
+            <a href="https://www.coursera.org/account/accomplishments/verify/3STD0OKC58M9?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank" rel="noopener">
+            <button class="btn btn--sm btn--outline cert__btn" data-preview>View Certificate</button>
+            </a>
+          </article>
+          <article class="cert glass reveal" data-org="jhu" data-name="HTML CSS and JavaScript for Web Developers">
+            <div class="cert__logo" style="--c:#002D72"><i class="lucide lucide-globe"></i></div>
+            <h3 class="cert__title">HTML, CSS &amp; JavaScript for Web Developers</h3>
+            <p class="cert__meta">Johns Hopkins University · 2024</p>
+            <a href="https://coursera.org/share/d209d28e0c773dd0653060fbf306b82e" target="_blank" rel="noopener">
+            <button class="btn btn--sm btn--outline cert__btn" data-preview>View Certificate</button>
+            </a>
+          </article>
+          <article class="cert glass reveal" data-org="coursera" data-name="Linear Algebra">
+            <div class="cert__logo" style="--c:#2A73CC"><i class="lucide lucide-sigma"></i></div>
+            <h3 class="cert__title">Linear Algebra</h3>
+            <p class="cert__meta">Coursera · 2024</p>
+            <a href="https://coursera.org/share/1d20fe149fe1d63edadffcdc99af4d87" target="_blank" rel="noopener">
+            <button class="btn btn--sm btn--outline cert__btn" data-preview>View Certificate</button>
+            </a>
+          </article>
+          <article class="cert glass reveal" data-org="michigan" data-name="Using Python to Access Web Data">
+            <div class="cert__logo" style="--c:#00274C"><i class="lucide lucide-globe-2"></i></div>
+            <h3 class="cert__title">Using Python to Access Web Data</h3>
+            <p class="cert__meta">University of Michigan · 2024</p>
+            <a href="https://coursera.org/share/56e5e7c1f812f712b937067c356f6417" target="_blank" rel="noopener">
+            <button class="btn btn--sm btn--outline cert__btn" data-preview>View Certificate</button>
+            </a>
+          </article>
+          <article class="cert glass reveal" data-org="michigan" data-name="Python Data Structures">
+            <div class="cert__logo" style="--c:#00274C"><i class="lucide lucide-boxes"></i></div>
+            <h3 class="cert__title">Python Data Structures</h3>
+            <p class="cert__meta">University of Michigan · 2024</p>
+            <a href="https://coursera.org/share/deeca41279f421e1c9a910b3e43e439a" target="_blank" rel="noopener">
+            <button class="btn btn--sm btn--outline cert__btn" data-preview>View Certificate</button>
+            </a>
+          </article>
+          <article class="cert glass reveal" data-org="michigan" data-name="Programming for Everybody">
+            <div class="cert__logo" style="--c:#00274C"><i class="lucide lucide-users"></i></div>
+            <h3 class="cert__title">Programming for Everybody (Python)</h3>
+            <p class="cert__meta">University of Michigan · 2024</p>
+            <a href="https://coursera.org/share/3fab142597ef43fb7820d4f44f137cfc" target="_blank" rel="noopener">
+            <button class="btn btn--sm btn--outline cert__btn" data-preview>View Certificate</button>
+            </a>
+          </article>
+          <article class="cert glass reveal" data-org="google" data-name="Introduction to Generative AI">
+            <div class="cert__logo" style="--c:#8B5CF6"><i class="lucide lucide-sparkles"></i>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" 
+         alt="Google Logo" width="40" height="40" />
+        </div>
+            <h3 class="cert__title">Introduction to Generative AI</h3>
+            <p class="cert__meta">Google Cloud · 2024</p>
+            <a href="https://coursera.org/share/3053239f57c9bb400410ddd5c99c148f" target="_blank" rel="noopener">
+            <button class="btn btn--sm btn--outline cert__btn" data-preview>View Certificate</button>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TIMELINE / JOURNEY
+    ============================================================ -->
+    <section class="section" id="timeline">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">05 — Journey</span>
+          <h2 class="section__title">The <span class="grad-text">road so far</span>.</h2>
+          <p class="section__sub">Education, milestones, and what's next.</p>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="glass timeline__card">
+              <span class="timeline__date">2029 · Goal</span>
+              <h3>B.Tech Graduation</h3>
+              <p>Graduate as an AI-first engineer with strong research and product experience.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="glass timeline__card">
+              <span class="timeline__date">2026 · Target</span>
+              <h3>First Internship</h3>
+              <p>Contribute to a real ML/product team — ship code, learn from mentors, deliver impact.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="glass timeline__card">
+              <span class="timeline__date">2025 · Now</span>
+              <h3>SR University — B.Tech CSE (AI &amp; ML)</h3>
+              <p>Building projects, earning certifications, and going deep on ML fundamentals.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="glass timeline__card">
+              <span class="timeline__date">2024 · Foundation</span>
+              <h3>15+ Certifications</h3>
+              <p>Python, Data Science, SQL, Cloud, and Generative AI through IBM, Google, and top universities.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+    ============================================================ -->
+    <section class="section section--contact" id="contact">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">06 — Contact</span>
+          <h2 class="section__title">Let's build something <span class="grad-text">meaningful</span>.</h2>
+          <p class="section__sub">Have a role, project, or idea? I'd love to hear about it.</p>
+        </header>
+
+        <div class="contact">
+          <form class="glass contact__form reveal" id="contactForm" novalidate>
+            <div class="field">
+              <label for="cName">Your name</label>
+              <input id="cName" name="name" type="text" required autocomplete="name" placeholder="Ada Lovelace" />
+            </div>
+            <div class="field">
+              <label for="cEmail">Email</label>
+              <input id="cEmail" name="email" type="email" required autocomplete="email" placeholder="you@company.com" />
+            </div>
+            <div class="field">
+              <label for="cSubject">Subject</label>
+              <input id="cSubject" name="subject" type="text" placeholder="Internship opportunity" />
+            </div>
+            <div class="field">
+              <label for="cMsg">Message</label>
+              <textarea id="cMsg" name="message" rows="5" required placeholder="Tell me a bit about it…"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary magnetic">
+              <i class="lucide lucide-send"></i><span>Send Message</span>
+            </button>
+            <p class="contact__note" id="contactNote" role="status" aria-live="polite"></p>
+          </form>
+
+          <aside class="contact__side reveal">
+            <div class="glass contact__card">
+              <h4>Direct</h4>
+              <a class="contact__row" href="mailto:numaan.ali.mustafa143@gmail.com">
+                <i class="lucide lucide-mail"></i>
+                <span>numaan.ali.mustafa143@gmail.com</span>
+              </a>
+              <a class="contact__row" href="https://github.com/mohdnumaanali" target="_blank" rel="noopener">
+                <i class="lucide lucide-github"></i>
+                <span>github.com/mohdnumaanali</span>
+              </a>
+              <a class="contact__row" href="https://www.linkedin.com/in/mohammed-numaan-ali-734551378" target="_blank" rel="noopener">
+                <i class="lucide lucide-linkedin"></i>
+                <span>linkedin.com/in/mohammed-numaan-ali</span>
+              </a>
+              <div class="contact__row">
+                <i class="lucide lucide-map-pin"></i>
+                <span>Hyderabad, Telangana, India</span>
+              </div>
+            </div>
+
+            <div class="glass contact__map" aria-label="Map placeholder for Hyderabad">
+              <div class="map">
+                <div class="map__pin"><i class="lucide lucide-map-pin"></i></div>
+                <div class="map__label">Hyderabad, India</div>
+                <div class="map__grid"></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="nav__name">Numaan<span class="nav__accent">.ai</span></span>
+        <p>Designed &amp; built with care — HTML, CSS, and vanilla JavaScript.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer__socials">
+        <a href="https://github.com/mohdnumaanali" target="_blank" rel="noopener" aria-label="GitHub"><i class="lucide lucide-github"></i></a>
+        <a href="https://www.linkedin.com/in/mohammed-numaan-ali-734551378" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="lucide lucide-linkedin"></i></a>
+        <a href="mailto:numaan.ali.mustafa143@gmail.com" aria-label="Email"><i class="lucide lucide-mail"></i></a>
+      </div>
+      <p class="footer__copy">© <span id="year">2026</span> Mohammed Numaan Ali. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="to-top" id="toTop" aria-label="Back to top">
+    <i class="lucide lucide-arrow-up"></i>
+  </button>
+
+  <!-- ============================================================
+       CERTIFICATE PREVIEW MODAL
+  ============================================================ -->
+  <div class="modal" id="certModal" role="dialog" aria-modal="true" aria-labelledby="certModalTitle" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel glass">
+      <button class="modal__close" aria-label="Close" data-close><i class="lucide lucide-x"></i></button>
+      <div class="modal__preview">
+        <div class="modal__cert">
+          <div class="modal__ribbon"></div>
+          <h3 id="certModalTitle">Certificate</h3>
+          <p id="certModalOrg">Organization</p>
+          <div class="modal__seal">
+            <i class="lucide lucide-award"></i>
+          </div>
+          <p class="modal__hint">High-resolution preview coming soon.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+</body>
+</html>
